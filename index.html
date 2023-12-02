@@ -1,0 +1,95 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style>
+		.lekhika {
+			border-left: 7px groove #00cc07;
+		}
+		h1 {
+			text-align: center;
+			color: #cc0000;
+		}
+		.container {
+			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
+			padding: 10px;
+			color: #333;
+			box-shadow: 0 0 5px #888;
+			border-radius: 2px;
+		}
+		.instruction {
+			font-size: small;
+			color: #777;
+		}
+		textarea {
+			width: 100%;
+			font-size: larger;
+			padding: 10px;
+			height: 15em;
+			border-radius: 2px;
+			font-family: "Meera", "Rachana", sans-serif;
+		}
+		footer {
+			font-size: smaller;
+		}
+		a {
+			color: #333;
+		}
+		a:hover {
+			color: #cc0000;
+		}
+		code {
+			border-radius: 15px;
+			background-color: #eee;
+			padding: 10px;
+			display: inline-block;
+			margin: auto;
+		}
+	</style>
+</head>
+<title>lekhika-js Nepali keyboard</title>
+<script src="lekhika.js"></script>
+<script>
+	window.onload = function () {
+		lekhika(document.getElementsByTagName('textarea')[0], {
+			enabled: true  /* to enable the input method directly without press ctrl+m */
+		});
+	};
+</script>
+
+<body>
+	<div class="container">
+		<h1>lekhika-js</h1>
+		<p class="instruction">Press control+m to enable and disable lekhika.</p>
+		<textarea></textarea>
+		<p class="instruction">Uses transliteration. Example: nepaalee = नेपाली, munaamadana = मुनामदन, agastyamunee = आगस्त्यमुनी  Refer
+			<a href="lekhika-keymap-rules.html">lekhika keymap rules</a> to learn typing.
+		</p>
+		<h2>Usage</h2>
+		<p>
+			To use this transliteration scheme in your webpage, download and include <a href="lekhika.js">this javascript file</a> in html pages.</p>
+		<code>&lt;script src="/path/to/lekhika.js"&gt;&lt;/script&gt;</code>
+		<p>Then bind lekhika to textareas and input fields. Example:</p>
+		<code>lekhika(document.getElementsByTagName('textarea')[0]);</code>
+		<p>By default, the lekhika input method is not enabled. It is enabled when users press control+m in the input field. If you want the input method enabled by default, pass it as an option.</p>
+		<code>lekhika(document.getElementsByTagName('textarea')[0], {enabled:true});</code>
+		<p>Once enabled, the input field will have a class lekhika. This class can be used for providing any kind of visual indication that input method is enabled. This page uses the following style to indicate lekhika is enabled.</p>
+		<code>.lekhika {border-left: 7px groove #00cc07;}</code>
+		<footer>&copy; <a href="https://khumnath.com.np">khumnath cg</a>, <script>document.write(new Date().getFullYear())</script>
+		</footer>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
